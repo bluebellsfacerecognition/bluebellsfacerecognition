@@ -1,4 +1,14 @@
-var uploadUrl = "https://face-recognition-masked-unmasked.cognitiveservices.azure.com/customvision/v3.0/Prediction/68e29f1e-edea-4108-85e4-4a92480efe57/classify/iterations/Mask%20Immune%20Face%20Recognition%20System/image";
+var uploadUrl = "https://face-recognition-masked-unmasked.cognitiveservices.azure.com/customvision/v3.0/Prediction/68e29f1e-edea-4108-85e4-4a92480efe57/classify/iterations/Final%20AI%20Model/image";
+var threshold = 0.7;
+
+window.onload = function() {
+    setTimeout(logoDisappear, 2000);
+}
+
+function logoDisappear() {
+    document.getElementById('logo').style.display = "none";
+    document.body.style.backgroundImage = "url('img/face-blur2.png')";
+}
 
 function upload(file) {
 
@@ -20,8 +30,12 @@ function upload(file) {
                 maxName = num.tagName;
             }
         });
-        document.getElementById('nameSpan').innerHTML = maxName;
-        document.getElementById('probSpan').innerHTML = (maxProb * 100).toFixed(4) + "%";
+        if (maxProb > threshold) {
+            document.getElementById('nameSpan').innerHTML = maxName;
+            document.getElementById('probSpan').innerHTML = (maxProb * 100).toFixed(4) + "%";
+        } else {
+            document.getElementById('nameSpan').innerHTML = "No close matches found";
+        }
     }
 
     //Display the same image from input
