@@ -35,7 +35,7 @@ function upload(file) {
             document.getElementById('probSpan').innerHTML = (maxProb * 100).toFixed(4) + "%";
         } else {
             document.getElementById('nameSpan').innerHTML = "No close matches found";
-            document.getElementById('nameSpan').style.left = "34%"
+            document.getElementById('nameSpan').style.left = "34%";
         }
     }
 
