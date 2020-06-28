@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="uploadImage"></div>
+        <form id="image-form" action="">
+            <label class="file-style">
+            <input type="file" id="upload-image" onchange="upload(this.files[0])" >
+            UPLOAD
+        </label>
+        </form>
+        <img id="uploadPreview" width="150px" height="100px">
+        <span id="nameSpan"></span>
+        <span id="probSpan"></span>
+    </div>
+</body>
+<!-- upload(this.files[0]) -->
+
+</html>

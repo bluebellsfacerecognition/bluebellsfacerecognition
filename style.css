@@ -1,0 +1,115 @@
+html {
+    background: url('img/pandasecurity-facial-recognition.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.circle {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    top: 20%;
+    left: 33%;
+    box-shadow: 0px 0px 100px #000;
+    border: 20px solid #1d2b52;
+    transition: transform .2s;
+}
+
+.circle:hover {
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.4);
+    background-color: #fff;
+    border: 20px solid #1d2b52;
+}
+
+.uploadImage {
+    position: absolute;
+    height: 128px;
+    width: 128px;
+    background-image: url('img/photo.png');
+    z-index: 2;
+    top: 10%;
+    left: 35%;
+    transform: scale(1);
+}
+
+#uploadPreview {
+    position: absolute;
+    /* height: 128px;
+    width: 128px; */
+    z-index: 2;
+    top: 51%;
+    left: 33%;
+    transform: scale(1);
+    border-radius: 15px;
+    display: none;
+}
+
+#upload-image {
+    position: absolute;
+    z-index: 2;
+    top: 44%;
+    left: 35%;
+    width: 90px;
+    text-align: center;
+    display: none;
+}
+
+#nameSpan {
+    font-family: Calibri;
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 38%;
+    text-align: center;
+}
+
+#probSpan {
+    font-family: Calibri;
+    position: absolute;
+    z-index: 2;
+    top: 80%;
+    left: 42%;
+    text-align: center;
+}
+
+.file-style {
+    font-family: Calibri;
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 40%;
+    width: 90px;
+    height: 22px;
+    cursor: pointer;
+    background-color: #e0556c;
+    border-radius: 5px;
+    padding: 2px 18px;
+    color: white;
+    font-size: 16px;
+}
+
+.camera-style {
+    font-family: Calibri;
+    position: absolute;
+    z-index: 2;
+    top: 77%;
+    left: 40%;
+    width: 90px;
+    height: 22px;
+    cursor: pointer;
+    background-color: #4db6e3;
+    border-radius: 5px;
+    padding: 2px 18px;
+    color: white;
+    font-size: 16px;
+}
