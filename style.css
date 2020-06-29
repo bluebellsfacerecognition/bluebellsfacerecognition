@@ -18,6 +18,22 @@ body {
     border: 10px solid #1d2b52;
 }
 
+#try {
+    z-index: 2;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    border-radius: 20px;
+    /* transform: scale(0.39); */
+    clip: rect(0px, 800px, 90px, 0px);
+    transition: clip 1s;
+    display: none;
+}
+
+#try:hover {
+    clip: rect(0px, 800px, 1000px, 0px);
+}
+
 .circle {
     position: absolute;
     height: 500px;

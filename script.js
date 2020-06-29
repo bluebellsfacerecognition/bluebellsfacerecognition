@@ -8,6 +8,7 @@ window.onload = function() {
 function logoDisappear() {
     document.getElementById('logo').style.display = "none";
     document.body.style.backgroundImage = "url('img/face-blur2.png')";
+    document.getElementById('try').style.display = 'block';
 }
 
 function upload(file) {
