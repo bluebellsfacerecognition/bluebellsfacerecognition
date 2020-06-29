@@ -33,9 +33,13 @@ function upload(file) {
         if (maxProb > threshold) {
             document.getElementById('nameSpan').innerHTML = maxName;
             document.getElementById('probSpan').innerHTML = (maxProb * 100).toFixed(4) + "%";
+            document.getElementById('nameSpan').style.left = "38%";
+            document.getElementById('probSpan').style.display = "block";
         } else {
             document.getElementById('nameSpan').innerHTML = "No close matches found";
             document.getElementById('nameSpan').style.left = "34%";
+            document.getElementById('probSpan').style.display = "none";
+
         }
     }
 
