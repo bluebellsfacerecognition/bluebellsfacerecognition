@@ -1,5 +1,5 @@
 var uploadUrl = "https://face-recognition-masked-unmasked.cognitiveservices.azure.com/customvision/v3.0/Prediction/68e29f1e-edea-4108-85e4-4a92480efe57/classify/iterations/Final%20AI%20Model/image";
-var threshold = 0.8;
+var threshold = 0.5;
 
 window.onload = function() {
     setTimeout(logoDisappear, 2000);
@@ -31,11 +31,18 @@ function upload(file) {
                 maxName = num.tagName;
             }
         });
+        alert(maxProb+ maxName);
         if (maxProb > threshold) {
             document.getElementById('nameSpan').innerHTML = maxName;
-            document.getElementById('probSpan').innerHTML = (maxProb * 100).toFixed(4) + "%";
-            document.getElementById('nameSpan').style.left = "38%";
+            if     (maxProb > 0.90){result="Excellent";colour = "#30cfbc"}
+            else if(maxProb > 0.75){result="High", colour='#55cf30'}
+            else if(maxProb > 0.50){result="Decent",colour="#fc9d03"}
+            document.getElementById('probSpan').innerHTML = /*(maxProb * 100).toFixed(4) + "%"*/ result + " Resemblance";
+            document.getElementById('nameSpan').style.left = "40%";
             document.getElementById('probSpan').style.display = "block";
+            document.getElementById('probSpan').style.left = "32%";
+            document.getElementById('probSpan').style.color = colour;
+
         } else {
             document.getElementById('nameSpan').innerHTML = "No close matches found";
             document.getElementById('nameSpan').style.left = "34%";
