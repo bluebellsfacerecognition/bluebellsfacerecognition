@@ -31,7 +31,7 @@ function upload(file) {
                 maxName = num.tagName;
             }
         });
-        alert(maxProb+ maxName);
+        //alert(maxProb+ maxName);
         if (maxProb > threshold) {
             document.getElementById('nameSpan').innerHTML = maxName;
             if     (maxProb > 0.90){result="Excellent";colour = "#30cfbc"}
