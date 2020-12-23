@@ -1,6 +1,6 @@
 var uploadUrl = "https://face-recognition-masked-unmasked.cognitiveservices.azure.com/customvision/v3.0/Prediction/68e29f1e-edea-4108-85e4-4a92480efe57/classify/iterations/Final%20AI%20Model/image";
 var threshold = 0.94;
-
+//
 window.onload = function() {
     setTimeout(logoDisappear, 2000);
 }
