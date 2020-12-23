@@ -35,9 +35,9 @@ function upload(file) {
         //
         if (maxProb > threshold) {
             document.getElementById('nameSpan').innerHTML = maxName;
-            if     (maxProb > 0.90){result="Excellent";colour = "#30cfbc"}
-            else if(maxProb > 0.75){result="High", colour='#55cf30'}
-            else if(maxProb > 0.50){result="Decent",colour="#fc9d03"}
+            if     (maxProb > 0.98){result="Excellent";colour = "#30cfbc"}
+            else if(maxProb > 0.96){result="High", colour='#55cf30'}
+            else if(maxProb > 0.94){result="Decent",colour="#fc9d03"}
             document.getElementById('probSpan').innerHTML = /*(maxProb * 100).toFixed(4) + "%"*/ result + " Resemblance";
             document.getElementById('nameSpan').style.left = "40%";
             document.getElementById('probSpan').style.display = "block";
